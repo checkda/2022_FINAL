@@ -2,7 +2,7 @@
 
 ## Q1. Table 1 만들기(15점)
 > 데이터(dt)의 연도 별 주어진 변수의 기술통계량을 Table로 나타내어라.  
-> 단, 변수 Q_SMK_YN과 Q_HBV_AG는 범주형으로. 
+> 단, 변수 Q_SMK_YN과 Q_HBV_AG는 범주형으로. <br/> 
 > 주어진 변수 : “HGHT”, “WGHT”, “BMI”, “HDL”, “LDL”, “Q_SMK_YN”, “Q_HBV_AG” (총 7개) 
 
 ```R
