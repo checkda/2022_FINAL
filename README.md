@@ -42,10 +42,9 @@ res.reg <- glm(time ~ rx + age + sex, data = colon)
 tb.reg <- glmshow.display(res.reg)     # 'jstable 패키지의 glmshow.display' 이용
 knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
-<img width="100%" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">{: width="100%"}
-
+<img width="100%" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
 Table: Linear regression predicting time
-|             |crude coeff.(95%CI)    |crude P value |adj. coeff.(95%CI)    |adj. P value |
+|             |crude coeff.(95%CI)    |crude P value |adj. coeff.(95%CI)    |adj. P value |{: width="100%"}
 |:------------|:----------------------|:-------------|:---------------------|:------------|
 |rx: ref.=Obs |NA                     |NA            |NA                    |NA           |
 |Lev          |24.66 (-79.49,128.82)  |0.643         |22.98 (-81.3,127.27)  |0.666        |
