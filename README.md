@@ -5,6 +5,16 @@
 ### 주어진 변수 : “HGHT”, “WGHT”, “BMI”, “HDL”, “LDL”, “Q_SMK_YN”, “Q_HBV_AG” (총 7개)
 
 ```R
+# 필요한 library 및 데이터 불러오기
+library(tableone);library(data.table);library(magrittr);library(survival);library(jstable)
+
+url <- "https://raw.githubusercontent.com/jinseob2kim/lecture-snuhlab/master/data/example_g1e.csv"
+dt <- fread(url, header=T)
+
+# dt의 1~6행 살펴보기
+head(dt)
+
+
 # myVars : 주어진 변수 추출
 myVars <- c("HGHT","WGHT","BMI","HDL","LDL", "Q_SMK_YN","Q_HBV_AG")
 
