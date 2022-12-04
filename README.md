@@ -47,7 +47,7 @@ knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 Table: Linear regression predicting time
 |                |crude coeff.(95%CI)       |crude P value    |adj. coeff.(95%CI)       |adj. P value    |
 |:--------------:|:------------------------:|:---------------:|:-----------------------:|:--------------:|
-||rx: ref.=Obs    ||NA                        ||NA               ||NA                       ||NA              ||
+||rx: ref.=Obs   |NA                        |NA               |NA                       |NA              |
 |Lev             |24.66 (-79.49,128.82)     |0.643            |22.98 (-81.3,127.27)     |0.666           |
 |Lev+5FU         |271.07 (166.41,375.74)    |< 0.001          |273.05 (168.19,377.9)    |< 0.001         |
 |age             |0.38 (-3.22,3.99)         |0.835            |0.37 (-3.21,3.95)        |0.84            |
