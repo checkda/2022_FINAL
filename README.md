@@ -45,9 +45,8 @@ knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 <img width="464" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
 
 Table: Linear regression predicting time
-
 |             |crude coeff.(95%CI)    |crude P value |adj. coeff.(95%CI)    |adj. P value |
-|:------------|:----------------------|:-------------|:---------------------|:------------|
+|:-----------:|:---------------------:|:------------:|:--------------------:|:-----------:|
 |rx: ref.=Obs |NA                     |NA            |NA                    |NA           |
 |Lev          |24.66 (-79.49,128.82)  |0.643         |22.98 (-81.3,127.27)  |0.666        |
 |Lev+5FU      |271.07 (166.41,375.74) |< 0.001       |273.05 (168.19,377.9) |< 0.001      |
@@ -63,8 +62,17 @@ res.logistic <- glm(status ~ rx + age + sex, data = colon, family = binomial)
 tb.logistic <- glmshow.display(res.logistic)   # 'jstable 패키지의 glmshow.display' 이용
 knitr::kable(tb.logistic$table, caption = tb.logistic$first.line)
 ```
+Table: Logistic regression predicting status
 
-![q2](q2.png)
+
+|             |crude OR.(95%CI) |crude P value |adj. OR.(95%CI)  |adj. P value |
+|:------------|:----------------|:-------------|:----------------|:------------|
+|rx: ref.=Obs |NA               |NA            |NA               |NA           |
+|Lev          |0.96 (0.77,1.2)  |0.709         |0.96 (0.77,1.2)  |0.747        |
+|Lev+5FU      |0.55 (0.44,0.68) |< 0.001       |0.54 (0.43,0.68) |< 0.001      |
+|age          |1 (0.99,1)       |0.296         |1 (0.99,1)       |0.294        |
+|sex          |0.97 (0.81,1.17) |0.758         |0.93 (0.77,1.12) |0.454        |
+
 ### 2-3. 콕스 생존분석(Cox proportional hazard)(5점)
 > Surv(time, status) ~ rx + age + sex 실행 후 table로 나태내어라.
 
