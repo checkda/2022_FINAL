@@ -44,15 +44,15 @@ knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
 <img width="464" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
 
-```{r}
-mtcars$vs <- as.factor(mtcars$vs)
-mtcars$cyl <- as.factor(mtcars$cyl)
+Table: Linear regression predicting time
 
-model <- glm(mpg ~ disp + vs + cyl, data = mtcars)
-model.display <- epiDisplay::regress.display(model, crude = T, crude.p.value = T)
-model.table <- model.display$table[rownames(model.display$table)!="", ]
-kable(model.table, caption = model.display$first.line)
-```
+|             |crude coeff.(95%CI)    |crude P value |adj. coeff.(95%CI)    |adj. P value |
+|:------------|:----------------------|:-------------|:---------------------|:------------|
+|rx: ref.=Obs |NA                     |NA            |NA                    |NA           |
+|Lev          |24.66 (-79.49,128.82)  |0.643         |22.98 (-81.3,127.27)  |0.666        |
+|Lev+5FU      |271.07 (166.41,375.74) |< 0.001       |273.05 (168.19,377.9) |< 0.001      |
+|age          |0.38 (-3.22,3.99)      |0.835         |0.37 (-3.21,3.95)     |0.84         |
+|sex          |13.93 (-72.26,100.12)  |0.751         |32.67 (-53.21,118.55) |0.456        |
 
 ### 2-2. 로지스틱 회귀분석(Logistic regression)(5점)
 > 마찬가지로 대장암 데이터 ‘colon’ 사용 <br/>
