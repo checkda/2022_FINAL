@@ -163,5 +163,5 @@ server <- function(input, output, session) {
 
 shinyApp(ui, server)
 ```
-> ShinyApps.io **URL : 
+> **ShinyApps.io URL : 
 https://xpszg5-checkda.shinyapps.io/project/**
