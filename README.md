@@ -44,6 +44,15 @@ knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
 <img width="464" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
 
+```{r}
+mtcars$vs <- as.factor(mtcars$vs)
+mtcars$cyl <- as.factor(mtcars$cyl)
+
+model <- glm(mpg ~ disp + vs + cyl, data = mtcars)
+model.display <- epiDisplay::regress.display(model, crude = T, crude.p.value = T)
+model.table <- model.display$table[rownames(model.display$table)!="", ]
+kable(model.table, caption = model.display$first.line)
+```
 
 ### 2-2. 로지스틱 회귀분석(Logistic regression)(5점)
 > 마찬가지로 대장암 데이터 ‘colon’ 사용 <br/>
