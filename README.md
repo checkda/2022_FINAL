@@ -25,7 +25,10 @@ catVars <- c("Q_SMK_YN","Q_HBV_AG")
 # 첫 번째 방법 : 범주형으로 미리 변환하지 않고 'factorVars'로 지정
 CreateTableOne(vars= myVars, factorVars = catVars, strata= "EXMD_BZ_YYYY", data= dt)
 ```
-![q1](q1.png)
+<img width="404" alt="Q1_1" src="https://user-images.githubusercontent.com/112446994/205484766-ea890eee-d06d-42ab-b84c-f3857616fd29.png">
+
+<img width="431" alt="Q1_2" src="https://user-images.githubusercontent.com/112446994/205484773-1462ab8e-1d1d-49f8-bab2-1cad0e45955f.png">
+
 
 ## Q2. 선형회귀, 로지스틱, 콕스생존분석 Table 만들기(15점)
 ### 2-1. 선형 회귀분석(Linear regression)(5점)
