@@ -61,7 +61,7 @@ knitr::kable(tb.cox$table, caption = tb.cox$caption)
 ```
 
 ## Q3. 샤이니 웹 앱 만든 후 ShinyApps.io 배포하기(10점)
-> 지난 주 강의 때 실습한 NBA 2018/19 시즌 스탯 혹은 직접 제작한 샤이니 웹 앱 제작하기
+> 지난 주 강의 때 실습한 NBA 2018/19 시즌 스탯 혹은 직접 제작한 샤이니 웹 앱 제작하기 <br/>
 > ShinyApps.io를 통해 배포한 후, 생성된 url도 함께 제출하시오.
 
 ```R
