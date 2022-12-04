@@ -62,14 +62,14 @@ res.logistic <- glm(status ~ rx + age + sex, data = colon, family = binomial)
 tb.logistic <- glmshow.display(res.logistic)   # 'jstable 패키지의 glmshow.display' 이용
 knitr::kable(tb.logistic$table, caption = tb.logistic$first.line)
 ```
-Table: Logistic regression predicting status
+**Table: Logistic regression predicting status
 |             |crude OR.(95%CI) |crude P value |adj. OR.(95%CI)  |adj. P value |
 |:-----------:|:---------------:|:------------:|:---------------:|:-----------:|
 |rx: ref.=Obs |NA               |NA            |NA               |NA           |
 |Lev          |0.96 (0.77,1.2)  |0.709         |0.96 (0.77,1.2)  |0.747        |
 |Lev+5FU      |0.55 (0.44,0.68) |< 0.001       |0.54 (0.43,0.68) |< 0.001      |
 |age          |1 (0.99,1)       |0.296         |1 (0.99,1)       |0.294        |
-|sex          |0.97 (0.81,1.17) |0.758         |0.93 (0.77,1.12) |0.454        |
+|sex          |0.97 (0.81,1.17) |0.758         |0.93 (0.77,1.12) |0.454        |**
 
 ### 2-3. 콕스 생존분석(Cox proportional hazard)(5점)
 > Surv(time, status) ~ rx + age + sex 실행 후 table로 나태내어라.
@@ -79,14 +79,14 @@ res.cox <- coxph(Surv(time, status) ~ rx + age + sex, data = colon, model = T)
 tb.cox <- cox2.display(res.cox)   # 'jstable 패키지의 cox2.display' 이용
 knitr::kable(tb.cox$table, caption = tb.cox$caption)
 ```
-Table: Cox model on time ('time') to event ('status')
+**Table: Cox model on time ('time') to event ('status')
 |             |crude HR(95%CI)  |crude P value |adj. HR(95%CI)   |adj. P value |
 |:-----------:|:---------------:|:------------:|:---------------:|:-----------:|
 |rx: ref.=Obs |NA               |NA            |NA               |NA           |
 |Lev          |0.98 (0.84,1.14) |0.786         |0.98 (0.84,1.14) |0.811        |
 |Lev+5FU      |0.64 (0.55,0.76) |< 0.001       |0.64 (0.55,0.76) |< 0.001      |
 |age          |1 (0.99,1)       |0.382         |1 (0.99,1)       |0.468        |
-|sex          |0.97 (0.85,1.1)  |0.61          |0.95 (0.84,1.08) |0.446        |
+|sex          |0.97 (0.85,1.1)  |0.61          |0.95 (0.84,1.08) |0.446        |**
 
 ## Q3. 샤이니 웹 앱 만든 후 ShinyApps.io 배포하기(10점)
 > 지난 주 강의 때 실습한 NBA 2018/19 시즌 스탯 혹은 직접 제작한 샤이니 웹 앱 제작하기 <br/>
