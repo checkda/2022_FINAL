@@ -29,8 +29,8 @@ CreateTableOne(vars= myVars, factorVars = catVars, strata= "EXMD_BZ_YYYY", data=
 
 ## Q2. 선형회귀, 로지스틱, 콕스생존분석 Table 만들기(15점)
 ### 2-1. 선형 회귀분석(Linear regression)(5점)
-#### survival 패키지에 내장되어 있는 대장암 데이터 ‘colon’ 사용
-#### time ~ rx + age + sex 선형회귀 실행 후 table로 나타내어라.
+> survival 패키지에 내장되어 있는 대장암 데이터 ‘colon’ 사용 <br/> 
+> time ~ rx + age + sex 선형회귀 실행 후 table로 나타내어라.
 
 ```R
 # colon의 1~6행 살펴보기
@@ -41,8 +41,8 @@ tb.reg <- glmshow.display(res.reg)     # 'jstable 패키지의 glmshow.display' 
 knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
 ### 2-2. 로지스틱 회귀분석(Logistic regression)(5점)
-#### 마찬가지로 대장암 데이터 ‘colon’ 사용
-#### status ~ rx + age + sex 로지스틱 회귀 실행 후 table로 나타내어라.
+> 마찬가지로 대장암 데이터 ‘colon’ 사용 <br/>
+> status ~ rx + age + sex 로지스틱 회귀 실행 후 table로 나타내어라.
 
 ```R
 res.logistic <- glm(status ~ rx + age + sex, data = colon, family = binomial)
@@ -52,7 +52,7 @@ knitr::kable(tb.logistic$table, caption = tb.logistic$first.line)
 
 ![q2](q2.png)
 ### 2-3. 콕스 생존분석(Cox proportional hazard)(5점)
-#### Surv(time, status) ~ rx + age + sex 실행 후 table로 나태내어라.
+> Surv(time, status) ~ rx + age + sex 실행 후 table로 나태내어라.
 
 ```R
 res.cox <- coxph(Surv(time, status) ~ rx + age + sex, data = colon, model = T)
@@ -61,8 +61,8 @@ knitr::kable(tb.cox$table, caption = tb.cox$caption)
 ```
 
 ## Q3. 샤이니 웹 앱 만든 후 ShinyApps.io 배포하기(10점)
-#### 지난 주 강의 때 실습한 NBA 2018/19 시즌 스탯 혹은 직접 제작한 샤이니 웹 앱 제작하기
-#### ShinyApps.io를 통해 배포한 후, 생성된 url도 함께 제출하시오.
+> 지난 주 강의 때 실습한 NBA 2018/19 시즌 스탯 혹은 직접 제작한 샤이니 웹 앱 제작하기
+> ShinyApps.io를 통해 배포한 후, 생성된 url도 함께 제출하시오.
 
 ```R
 # 참고용 예시 코드
