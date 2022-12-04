@@ -44,7 +44,7 @@ knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
 <img width="100%" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
 
-Table: Linear regression predicting time
+**Table: Linear regression predicting time**
 |             |crude coeff.(95%CI)    |crude P value |adj. coeff.(95%CI)    |adj. P value |
 |:------------|:----------------------|:-------------|:---------------------|:------------|
 |rx: ref.=Obs |NA                     |NA            |NA                    |NA           |
