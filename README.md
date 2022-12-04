@@ -29,7 +29,6 @@ CreateTableOne(vars= myVars, factorVars = catVars, strata= "EXMD_BZ_YYYY", data=
 
 <img width="431" alt="Q1_2" src="https://user-images.githubusercontent.com/112446994/205484773-1462ab8e-1d1d-49f8-bab2-1cad0e45955f.png">
 
-
 ## Q2. 선형회귀, 로지스틱, 콕스생존분석 Table 만들기(15점)
 ### 2-1. 선형 회귀분석(Linear regression)(5점)
 > survival 패키지에 내장되어 있는 대장암 데이터 ‘colon’ 사용 <br/> 
@@ -43,6 +42,9 @@ res.reg <- glm(time ~ rx + age + sex, data = colon)
 tb.reg <- glmshow.display(res.reg)     # 'jstable 패키지의 glmshow.display' 이용
 knitr::kable(tb.reg$table, caption = tb.reg$first.line)
 ```
+<img width="464" alt="Q2_1" src="https://user-images.githubusercontent.com/112446994/205485032-15acb902-217c-4973-9060-b7ef4af21a37.png">
+
+
 ### 2-2. 로지스틱 회귀분석(Logistic regression)(5점)
 > 마찬가지로 대장암 데이터 ‘colon’ 사용 <br/>
 > status ~ rx + age + sex 로지스틱 회귀 실행 후 table로 나타내어라.
