@@ -163,4 +163,4 @@ server <- function(input, output, session) {
 
 shinyApp(ui, server)
 ```
-![q3](q3.png)
+(https://xpszg5-checkda.shinyapps.io/project/)
