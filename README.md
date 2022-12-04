@@ -64,7 +64,7 @@ knitr::kable(tb.logistic$table, caption = tb.logistic$first.line)
 ```
 Table: Logistic regression predicting status
 |             |crude OR.(95%CI) |crude P value |adj. OR.(95%CI)  |adj. P value |
-|:------------|:----------------|:-------------|:----------------|:------------|
+|:-----------:|:---------------:|:------------:|:---------------:|:-----------:|
 |rx: ref.=Obs |NA               |NA            |NA               |NA           |
 |Lev          |0.96 (0.77,1.2)  |0.709         |0.96 (0.77,1.2)  |0.747        |
 |Lev+5FU      |0.55 (0.44,0.68) |< 0.001       |0.54 (0.43,0.68) |< 0.001      |
@@ -81,7 +81,7 @@ knitr::kable(tb.cox$table, caption = tb.cox$caption)
 ```
 Table: Cox model on time ('time') to event ('status')
 |             |crude HR(95%CI)  |crude P value |adj. HR(95%CI)   |adj. P value |
-|:------------|:----------------|:-------------|:----------------|:------------|
+|:-----------:|:---------------:|:------------:|:---------------:|:-----------:|
 |rx: ref.=Obs |NA               |NA            |NA               |NA           |
 |Lev          |0.98 (0.84,1.14) |0.786         |0.98 (0.84,1.14) |0.811        |
 |Lev+5FU      |0.64 (0.55,0.76) |< 0.001       |0.64 (0.55,0.76) |< 0.001      |
